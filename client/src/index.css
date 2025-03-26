@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 231.4 48.2% 47.5%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 45 93.4% 47.5%;
+    --secondary-foreground: 220 8.9% 10.2%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 231.4 48.2% 47.5%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 231.4 48.2% 47.5%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 45 93.4% 47.5%;
+    --secondary-foreground: 220 8.9% 10.2%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 231.4 48.2% 47.5%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  /* Syntax highlighting styles */
+  .token-keyword {
+    color: #ff79c6;
+  }
+  
+  .token-string {
+    color: #f1fa8c;
+  }
+  
+  .token-comment {
+    color: #6272a4;
+  }
+  
+  .token-function {
+    color: #50fa7b;
+  }
+  
+  .token-number {
+    color: #bd93f9;
+  }
+  
+  .token-operator {
+    color: #ff79c6;
+  }
+  
+  .token-boolean {
+    color: #bd93f9;
+  }
+  
+  .token-type {
+    color: #8be9fd;
+  }
+
+  /* Code editor styling */
+  .line-number {
+    display: inline-block;
+    width: 2rem;
+    text-align: right;
+    margin-right: 1rem;
+    color: #6272a4;
+    user-select: none;
+  }
+
+  /* Enhanced scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* Font settings */
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .font-roboto {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'Fira Code', monospace;
+  }
+
+  /* Progress bar animation */
+  @keyframes progress {
+    0% { width: 0%; }
+    100% { width: 100%; }
+  }
+  
+  .progress-active {
+    animation: progress 0.5s ease-in-out;
+  }
+}
